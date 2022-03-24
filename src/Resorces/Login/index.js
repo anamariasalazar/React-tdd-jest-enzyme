@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Grid, Paper, TextField } from "@material-ui/core";
 import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import "./login.scss";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../ThemeContext";
 
 const Login = () => {
+   
   const Style = {
     padding: 30,
     height: "50vh",

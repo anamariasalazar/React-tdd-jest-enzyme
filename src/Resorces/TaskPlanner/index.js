@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
+import "./task.css";
 
 const TaskPlanner = () => {
   const [tasks, setTasks] = useState("");
+  const { state  } = useContext(ThemeContext);
   useEffect(() => {
     fetch("http://localhost:8080/v1/task", {
       mode: "cors",
@@ -16,7 +19,7 @@ const TaskPlanner = () => {
       });
   }, []);
   return (
-    <div>
+    <div className={`task-${state.isDarkMode ? "dark" : "light"}`} >
       {tasks &&
         tasks.map((item, idx) => {
           return (
