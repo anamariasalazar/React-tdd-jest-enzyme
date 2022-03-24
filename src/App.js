@@ -4,7 +4,7 @@ import TaskPlanner from './Resorces/TaskPlanner';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
-function App() {
+function App() { 
     return (
       <div>
         <BrowserRouter>
