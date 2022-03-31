@@ -1,9 +1,9 @@
 import { shallow } from  "enzyme";
-import  App  from  "./App";
+import  Login  from  "./index";
 
-describe("<App/>", () => {
+describe("<Login/>", () => {
 	it("should render correctly", () => {
-		const  wrapper = shallow(<App  />);
+		const  wrapper = shallow(<Login  />);
 		expect(wrapper).toHaveLength(1);
 	});
 });

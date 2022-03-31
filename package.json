@@ -26,7 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx .",
     "lint:fix": "npm run lint -- --fix",
@@ -55,7 +55,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
     "@types/jest": "^27.4.1",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "babel-jest": "^27.5.1",
     "enzyme": "^3.11.0",
     "eslint": "^8.11.0",
@@ -64,5 +64,10 @@
     "jest": "^27.5.1",
     "prettier": "^2.5.1"
   },
-  "prettier": {}
+  "prettier": {},
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.config.js"
+    ]
+  }
 }

@@ -4,7 +4,7 @@ import "./task.css";
 
 const TaskPlanner = () => {
   const [tasks, setTasks] = useState("");
-  const { state  } = useContext(ThemeContext);
+  const { state="" } = useContext(ThemeContext);
   useEffect(() => {
     fetch("http://localhost:8080/v1/task", {
       mode: "cors",
